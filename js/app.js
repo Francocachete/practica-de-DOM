@@ -59,10 +59,18 @@ const verMas = ()=>{
     
 }
 
+const obtenerTexto = (e)=>{
+    e.preventDefault();
+    const inputBusqueda = document.querySelector("#inputBusqueda");
+    console.log(inputBusqueda.value)
+}
+
 const btnVerMas = document.getElementsByTagName("button");
-console.log(btnVerMas[3]);
+const formularioBusqueda = document.querySelector("form");
+
 
 //si la funcion lleva parametros tengo que guardarla en una funcion anonima
 //btnVerMas[3].addEventListener("click", ()=>{verMas("sas", "aaa", 22))}
 
 btnVerMas[3].addEventListener("click", verMas)
+formularioBusqueda.addEventListener("submit", obtenerTexto)
